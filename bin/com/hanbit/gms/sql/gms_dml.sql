@@ -1,9 +1,4 @@
 -- id, pw, ssn, name, regdate;
-SELECT * FROM Member;
-SELECT * FROM Member WHERE name = '이주연';
-
-SELECT COUNT(*) AS count FROM Member;
-
 INSERT INTO Member(id, pw, ssn, name, regdate)
 VALUES('hon', '1', '800101-123456', '홍길똥', SYSDATE);
 
@@ -34,10 +29,17 @@ VALUES('cuza','1','930705-223456','구수완',SYSDATE);
 INSERT INTO Member(id, pw, ssn, name, regdate)
 VALUES('cream','1','170513-223456','구크림',SYSDATE);
 
+SELECT * FROM Member;
+SELECT * FROM Member WHERE name = '';
+SELECT COUNT(*) AS count FROM Member;
+SELECT * FROM Member WHERE id = '';
+UPDATE Member SET password='' WHERE id='';
+DELETE FROM Member WHERE id='';
+
+
 -- id, title, content;
 -- article_seq, hitcount;
 -- regdate;
-
 INSERT INTO Board(article_seq,id,title,content,hitcount,regdate)
 VALUES(article_seq.nextval,'hon','안녕 난 홍길동','난 역적일까 아닐까',0,SYSDATE);
 
@@ -70,6 +72,9 @@ VALUES(article_seq.nextval,'cream','냐옹','난 아이스크림따위는 먹지
 
 
 INSERT INTO Board(article_seq,id,title,content,hitcount,regdate) VALUES(article_seq.nextval,'cream','sisi','sisisi',0,SYSDATE);
-
-
 SELECT * FROM Board;
+SELECT * FROM Board WHERE id='hon';
+SELECT * FROM Board WHERE article_seq=1020;
+SELECT COUNT(*) AS count FROM Board;
+UPDATE Board SET title='수정업뎃',content='업뎃내용' WHERE article_seq='1020';
+DELETE FROM Board WHERE article_seq='1020';

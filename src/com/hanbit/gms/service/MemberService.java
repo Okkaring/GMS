@@ -10,7 +10,7 @@ import com.hanbit.gms.domain.MemberBean;
 public interface MemberService {
 	public String addMember(MemberBean member);			
 	public List<MemberBean> list();					
-	public int countMembers();							
+	public String countMembers();							
 	public MemberBean findById(String id);	
 	public List<MemberBean> findByName(String name); 
 	public String modify(MemberBean bean);

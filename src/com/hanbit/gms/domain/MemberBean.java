@@ -59,7 +59,7 @@ public class MemberBean implements Serializable{
 
 		@Override
 		public String toString() {
-			return String.format("MemberBean [id= %s / pw= %s / ssn= %s / name= %s / regdate= %s ] \n",id, pw, ssn, name, regdate );
+			return String.format("멤버 [id= %s / pw= %s / ssn= %s / name= %s / regdate= %s ] \n",id, pw, ssn, name, regdate );
 		}
 
 
